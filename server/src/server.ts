@@ -1,7 +1,7 @@
 import App from './app'
 
 class Server {
-    private http: any;
+    private readonly http: any;
     private app: App;
 
     constructor() {
@@ -22,8 +22,6 @@ class Server {
 
     public start() {
         this.http.listen(this.app.expressApp.get('port'), () => {
-
-
             console.log(
                 "  App is running at http://localhost:%d in %s mode",
                 this.app.expressApp.get("port"),

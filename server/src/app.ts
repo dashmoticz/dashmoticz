@@ -1,9 +1,10 @@
 import express from "express";
 
 export default class App {
-    private _expressApp: express.Application;
+    private readonly _expressApp: express.Application;
 
     constructor() {
+        this._expressApp = express();
         this.configure();
     }
 
@@ -12,7 +13,6 @@ export default class App {
     }
 
     public configure() {
-        this._expressApp = express();
         this._expressApp.set("port", process.env.PORT || 3000);
 
         this._expressApp.get('/', (request: any, response: any) => {
