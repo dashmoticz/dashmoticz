@@ -8,7 +8,6 @@ cd server
 npm install
 ```
 
-
 ## Server in development mode
 ```bash
 npm run watch
